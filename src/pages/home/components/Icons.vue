@@ -1,6 +1,6 @@
 <template>
 	<div class="icons">
-		<swiper>
+		<swiper :options="swiperOption">
 			<swiper-slide v-for="(page,index) of pages" :key="index">
 				<div class="icon" v-for ="item of page" :key="item.id">
 					<div class="icon-img">
@@ -17,6 +17,10 @@ export default {
 	name: 'Icons',
 	data () {
 		return {
+			swiperOption: {
+				autoplay:false,
+				disableOnInteraction: true
+			},
 			iconsList: [{
 				id: '0001',
 				imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -81,6 +85,8 @@ export default {
 .icons >>> .swiper-container
 	height:0
 	padding-bottom:50%
+.icons
+	margin-top:.1rem
 	.icon
 		position:relative
 		float:left
