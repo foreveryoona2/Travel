@@ -14,13 +14,13 @@ export default new Vuex.Store({
 			ctx.commit('changeCity2',city)
 		}
 	},
-	mutations,
+	mutations
 	//在vuex当中，getters相当于组件当中的computed计算属性，
 	//当我们需要根据state里的数据中计算出新的数据时
 	//就要用到getters
-	getters: {
-		doubleCity (state) {
-			return state.city + ' ' + state.city
-		}
-	}
+	// getters: {
+	// 	doubleCity (state) {
+	// 		return state.city + ' ' + state.city
+	// 	}
+	// }
 })

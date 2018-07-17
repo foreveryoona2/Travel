@@ -9,7 +9,7 @@
 		</div>
 		<router-link to="/city">
 			<div class="header-right">
-				{{this.doubleCity}}
+				{{this.city}}
 				<span class="iconfont arrow-icon">&#xe64a;</span>
 			</div>			
 		</router-link>
@@ -26,8 +26,8 @@ export default {
 	name: 'HomeHeader',
 	computed: {
 		//...用展开运算符，mapState是把state里的数据映射到该组件的计算属性当中
-		...mapState(['city']),
-		...mapGetters(['doubleCity'])
+		...mapState(['city'])
+		//...mapGetters(['doubleCity'])
 	}
 
 };
