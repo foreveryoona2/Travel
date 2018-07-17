@@ -5,14 +5,14 @@
 				<div class="title">当前城市</div>
 				<div class="button-list">
 					<div class="button-wrapper">
-						<div class="button">北京</div>
+						<div class="button">{{this.currentCity}}</div>
 					</div>
 				</div>
 			</div>
 			<div class="area">
 				<div class="title">热门城市</div>
 				<div class="button-list">
-					<div class="button-wrapper" v-for="item of hot" :key="item.id">
+					<div class="button-wrapper" v-for="item of hot" :key="item.id" @click="handleChangeCity(item.name)">
 						<div class="button">{{item.name}}</div>
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 			>
 				<div class="title">{{key}}</div>
 				<div class="item-list">
-					<div class="item" v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</div>
+					<div class="item" v-for="innerItem of item" :key="innerItem.id" @click="handleChangeCity(innerItem.name)">{{innerItem.name}}</div>
 				</div>
 			</div>
 		</div>
@@ -33,12 +33,18 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
 	name: 'CityList',
 	props:{
 		cities: Object,
 		hot: Array,
 		letter:String
+	},
+	computed: {
+		...mapState({
+			currentCity: 'city'
+		})
 	},
 	mounted () {
 		this.scroll = new Bscroll(this.$refs.wrapper)
@@ -52,6 +58,17 @@ export default {
 			}
 		
 		}
+	},
+	methods: {
+		handleChangeCity (city) {
+			// 此处无异步操作或批量同步操作，因此直接跳过actions的dispatch方法，通过mutations的commit方法改变state里的数据
+			//this.$store.commit('changeCity2',city)
+			// 以上代码在调用了mapMutations之后，可简化为以下代码
+			this.changeCity2(city)
+			this.$router.push('/')
+		},
+		//把mutations里的changeCity2映射到该组件的methods中
+		...mapMutations(['changeCity2'])
 	}
 };
 </script>

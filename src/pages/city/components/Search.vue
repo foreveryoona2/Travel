@@ -3,12 +3,15 @@
 		<div class="search">
 			<input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音">
 		</div>
-		<div class="search-content" ref="wrapper" v-show="keyword">
-			<ul>
-				<li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
-				<li class="search-item" v-show="hasNoData">没有找到匹配数据</li>
-			</ul>
+		<div v-show="show">
+			<div class="search-content" ref="wrapper" v-show="keyword">
+				<ul>
+					<li class="search-item" v-for="item of list" :key="item.id" @click="handleChangeCity(item.name)">{{item.name}}</li>
+					<li class="search-item" v-show="hasNoData">没有找到匹配数据</li>
+				</ul>
+			</div>
 		</div>
+		
 	</div>
 </template>
 <script>
@@ -18,11 +21,22 @@ export default {
 	props:{
 		cities: Object
 	},
+	methods: {
+		handleChangeCity (city) {
+			this.$store.dispatch('changeCity',city)
+			this.show = !this.show
+			this.keyword = ''
+			// 使用router的api跳转
+			//this.$router.push('/')
+		}
+
+	},
 	data () {
 		return {
 			list: [],
 			keyword: '',
-			timer: null
+			timer: null,
+			show: true
 		}
 	},
 	computed: {
@@ -42,6 +56,9 @@ export default {
 				this.list = []
 				return
 
+			}
+			if (this.keyword) {
+				this.show = true
 			}
 			this.timer = setTimeout(() => {
 				const result = []

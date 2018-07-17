@@ -1,0 +1,77 @@
+[33mcommit 81b51b167a46cf609aed959d3f7b0ca0e9c843ae[m[33m ([m[1;36mHEAD -> [m[1;32mcity-keepalive[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/city-vuex[m[33m, [m[1;32mmaster[m[33m, [m[1;32mcity-vuex[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Tue Jul 17 00:43:17 2018 +0800
+
+    'vuex'
+
+[33mcommit 7ca3639321457373f21fd96164aba69abdac0368[m[33m ([m[1;31morigin/city-search-logic[m[33m, [m[1;32mcity-search-logic[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Mon Jul 16 20:00:20 2018 +0800
+
+    'city-search-content'
+
+[33mcommit 92319f06bfe718020759325424ee428e6e25e34a[m[33m ([m[1;31morigin/city-componets[m[33m, [m[1;31morigin/city-ajax[m[33m, [m[1;32mcity-componets[m[33m, [m[1;32mcity-ajax[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sun Jul 15 19:55:50 2018 +0800
+
+    'finish_city-ajax'
+
+[33mcommit f33b107860557a81b7066241aced7e2405136766[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sun Jul 15 17:24:46 2018 +0800
+
+    '配置文件更改'
+
+[33mcommit 4a3b4bfedfc0505a105cc0bf00bc278d66f35c5e[m[33m ([m[1;31morigin/city-search[m[33m, [m[1;31morigin/city-list[m[33m, [m[1;32mcity-search[m[33m, [m[1;32mcity-list[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sun Jul 15 16:19:57 2018 +0800
+
+    'search'
+
+[33mcommit a38a12bb51c668363dcca44c2a8b4afcc1566884[m[33m ([m[1;31morigin/city-router[m[33m, [m[1;32mcity-router[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sun Jul 15 00:29:09 2018 +0800
+
+    'city-router'
+
+[33mcommit db2a48aa8d09dbb2f2cd148c8339610205ccc9a0[m[33m ([m[1;31morigin/index-ajax[m[33m, [m[1;32mindex-ajax[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sat Jul 14 23:28:57 2018 +0800
+
+    'ajax完结'
+
+[33mcommit c16272395effe15b8f72c633091464e9fde6c69a[m[33m ([m[1;31morigin/index-recommend[m[33m, [m[1;32mindex-recommend[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sat Jul 14 21:40:59 2018 +0800
+
+    'recommend完结'
+
+[33mcommit 6437b0f6cf8616d334e16d6bf5c040dfc4aa2b97[m[33m ([m[1;31morigin/index-icons[m[33m, [m[1;32mindex-icons[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sat Jul 14 19:45:55 2018 +0800
+
+    'icons完结'
+
+[33mcommit a088ee091a94809079b0c5f4715483341c54543f[m[33m ([m[1;31morigin/index-swiper[m[33m, [m[1;32mindex-swiper[m[33m)[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Sat Jul 14 01:10:34 2018 +0800
+
+    'change'
+
+[33mcommit b44f0b7b7333d2a5868c6f601de73902cade64b7[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Fri Jul 13 20:20:00 2018 +0800
+
+    'addHeader'
+
+[33mcommit b1a0cc8daa113937b11e4d5e6cc3b65b9d1afacb[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Fri Jul 13 01:33:31 2018 +0800
+
+    '上传初始化代码'
+
+[33mcommit ab96c6cf580a12f122d7f614b7ed7254bedbf9eb[m
+Author: foreveryoona <foreveryoona2@163.com>
+Date:   Fri Jul 13 01:32:06 2018 +0800
+
+    first commit
