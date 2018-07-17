@@ -5,7 +5,7 @@
 		</div>
 		<div class="search-content" ref="wrapper" v-show="keyword">
 			<ul>
-				<li class="search-item" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
+				<li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
 				<li class="search-item" v-show="hasNoData">没有找到匹配数据</li>
 			</ul>
 		</div>
@@ -13,21 +13,10 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
-import { mapState, mapMutations } from 'vuex'
 export default {
 	name: 'CitySearch',
 	props:{
 		cities: Object
-	},
-	methods: {
-		handleCityClick (city) {
-			//this.$store.commit是vuex里，组件跳过actions，直接通过mutations去改变state里的数据 
-			// this.$store.commit('changeCity2',city)
-			this.changeCity2(city)//使用vuex的写法
-			this.$router.push('/') //vue提供的路由跳转,和js的location类似
-		},
-		...mapMutations(['changeCity2'])
-		
 	},
 	data () {
 		return {
@@ -52,6 +41,7 @@ export default {
 			if(!this.keyword) {
 				this.list = []
 				return
+
 			}
 			this.timer = setTimeout(() => {
 				const result = []
