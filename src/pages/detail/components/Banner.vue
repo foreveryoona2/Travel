@@ -1,18 +1,18 @@
 <template>
 	<div>
 		<div class="banner" @click="handleShowGallary">
-			<img class="banner-img" src="https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_750x440_43baa2df.jpg" >
+			<img class="banner-img" :src="bannerImg" >
 			<div class="banner-info">
 				<div class="banner-title">
-					出发地:北京 北京旭冉之旅
+					{{this.sightName}}
 				</div>
 				<div class="banner-number">
 					<span class="iconfont banner-icon">&#xe663;</span>
-					39
+					{{this.bannerImgs.length}}
 				</div>
 			</div>
 		</div>	
-		<common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>	
+		<common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>	
 	</div>
 
 </template>
@@ -21,10 +21,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
 	name: 'DetailBanner',
+	props: {
+		sightName: String,
+		bannerImg: String,
+		bannerImgs: Array
+	},
 	data () {
 		return {
-			showGallary: false,
-			imgs: ['https://imgs.qunarzz.com/p/tts2/1804/97/382b3bd308aea002.jpg_750x440_43baa2df.jpg','https://imgs.qunarzz.com/p/tts4/1807/d1/87f9594327e9f602.jpg_750x440_2c325cee.jpg']
+			showGallary: false
 		}
 
 		
@@ -74,7 +78,4 @@ export default {
 			font-size .24rem
 			.banner-icon
 				font-size .24rem
-				
-			
-		
 </style>
