@@ -23,13 +23,13 @@ export default {
 		return {
 			showAbs: true,
 			opacityStyle: {
-				opacity: 0
+				opacity: 1
 			}
 		}
 	},
 	methods: {
 		handleScroll () {
-			//console.log('scroll')
+			console.log('scroll')
 			const top = document.documentElement.scrollTop
 			if (top > 60) {
 				let opacity = top / 140
@@ -39,15 +39,15 @@ export default {
 			} else {
 				this.showAbs = true
 			}
-			console.log()
+			console.log('lla')
 		}
 	},
-	activated () {
+	mounted () {
 		//绑定scroll事件，一旦此事件执行，会触发handleScroll事件执行
 		window.addEventListener('scroll',this.handleScroll)
 		//全局事件的解绑，window是全局对象，会影响其他组件
 	},
-	deactivated () {
+	unmounted () {
 		//在页面即将被隐藏，或者即将被替换成新页面的时候会触发这个生命周期钩子
 		window.removeEventListener('scroll',this.handleScroll)
 	}
