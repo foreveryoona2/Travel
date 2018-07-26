@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'babel-polyfill'//所有浏览器都支持promise
 import store from './store'//引入vuex部分
 import 'styles/reset.css'
 import 'styles/border.css'
